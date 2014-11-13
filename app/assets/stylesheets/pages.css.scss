@@ -15,11 +15,23 @@ body {
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+
 }
 .jumbotron .btn {
   padding: 14px 24px;
   font-size: 21px;
+}
+
+.jumorange {
+  background-color: #FFAD33;
+}
+
+.jumblue {
+  background-color: #3E93AF;
+}
+
+.jumgrey {
+  background-color: #B2B2B2;
 }
 
 /* Customize the nav-justified links to be fill the entire space of the .navbar */

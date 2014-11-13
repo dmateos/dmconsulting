@@ -41,11 +41,14 @@
       <div class="masthead">
         <h3 class="text-muted">DM Consulting</h3>
         <ul class="nav nav-justified">
-          <li> <%= link_to "Home", "/" =%> </li>
-          <li> <%= link_to "About", "/about" =%> </li>
-          <li> <%= link_to "Services", "/services" =%> </li>
-          <li> <%= link_to "Contact", "/contact" =%> </li>
-          <li> <%= link_to "Signup/Login", "blank" =%> </li>
+          <li class="<%= 'active' if current_page?(root_path) %>"> <%= link_to "Home", root_path =%> </li>
+          <li class="<%= 'active' if current_page?(services_path) %>"> <%= link_to "Services", services_path =%> </li>
+          <li class="<%= 'active' if current_page?(contact_path) %>"> <%= link_to "Contact", contact_path =%> </li>
+          <% if not user_signed_in? %>
+           <li> <%= link_to "Signup/Login", new_user_registration_path =%> </li>
+          <% else %>
+           <li> <%= link_to "Dashboard", edit_user_registration_path =%> </li>
+          <% end %>
         </ul>
       </div>
       <%= bootstrap_flash %>
