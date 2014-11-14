@@ -45,9 +45,9 @@
           <li class="<%= 'active' if current_page?(services_path) %>"> <%= link_to "Services", services_path =%> </li>
           <li class="<%= 'active' if current_page?(contact_path) %>"> <%= link_to "Contact", contact_path =%> </li>
           <% if not user_signed_in? %>
-           <li> <%= link_to "Signup/Login", new_user_registration_path =%> </li>
+            <li class="<%= 'active' if current_page?(new_user_session_path) %>"> <%= link_to "Signup/Login", new_user_session_path =%> </li>
           <% else %>
-           <li> <%= link_to "Dashboard", edit_user_registration_path =%> </li>
+            <li class="<%= 'active' if current_page?(new_user_session_path) %>"> <%= link_to "Dashboard", edit_user_registration_path =%> </li>
           <% end %>
         </ul>
       </div>
