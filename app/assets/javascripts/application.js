@@ -14,4 +14,7 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
+//= require three
+//= require FirstPersonControls
+//= require renderer
 //= require_tree .
