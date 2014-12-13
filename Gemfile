@@ -41,3 +41,4 @@ gem 'spring',        group: :development
 gem 'mysql2'
 gem "twitter-bootstrap-rails" #bootstrap
 gem "devise" #user auth
+gem "pundit" #user auth

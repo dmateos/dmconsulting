@@ -120,3 +120,7 @@ body {
   }
 }
 
+.form-control-size {
+    min-width: 0;
+    width: auto;
+}

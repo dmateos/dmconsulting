@@ -1,0 +1,30 @@
+<div class="container" id="header-small">
+  <div id="webgl-container">
+  </div>
+</div>
+
+<div class="container">
+  <table class="table">
+    <tr>
+      <th> Name </th>
+      <th> Email </th>
+      <th> Subject </th>
+      <th> Time </th>
+      <th> Show </th>
+      <th> Edit </th>
+      <th> Destroy </th>
+    </tr>
+
+    <% @contacts.each do |contact| %>
+    <tr>
+      <td> <%= contact.name %> </td>
+      <td> <%= contact.email %> </td>
+      <td> <%= contact.subject %> </td>
+      <td> <%= contact.created_at %> </td>
+      <td> <%= link_to "show", admin_contact_path(contact) %> </td>
+      <td> <%= link_to "edit", edit_admin_contact_path(contact) %> </td>
+      <td> <%= link_to "show", admin_contact_path(contact) %> </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

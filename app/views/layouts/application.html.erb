@@ -37,6 +37,17 @@
     <%= javascript_include_tag "application" %>
   </head>
   <body>
+    <% if current_user and current_user.admin? %>
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <ul class="nav navbar-nav">
+            <li> <%= link_to "Contacts", admin_contacts_path %> </li>
+            <li> <%= link_to "Logout", destroy_user_session_path, method: :delete %> </li>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+
     <div class="container">
       <div class="masthead">
         <h3 class="text-muted">Greywire IT</h3>
@@ -51,9 +62,9 @@
           <% end %>
         </ul>
       </div>
+    <%= bootstrap_flash %>
     </div>
 
-    <%= bootstrap_flash %>
     <%= yield %>
   </body>
 </html>
